@@ -95,7 +95,8 @@ gridView 생성
         android:layout_height="wrap_content"
         android:id="@+id/gridView"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:numColumns="3"/>
 ```
 gridView inflation
 

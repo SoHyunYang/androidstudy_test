@@ -144,7 +144,7 @@ class GridViewAdaptor extends BaseAdapter
             return view;
         }
 ```
-listView에 Adaptor를 설정해 주기
+gridView에 Adaptor를 설정해 주기
 ```JAVA
 public class MainActivity extends AppCompatActivity {
 

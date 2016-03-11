@@ -3,7 +3,15 @@
 # List View
 
 ##1. textView 하나를 List View의 item으로 만들기
-
+listView 생성
+```XML
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+```
 listView inflation
 
 ```JAVA

@@ -140,7 +140,7 @@ class GridViewAdaptor extends BaseAdapter
             TextView view = new TextView(getApplicationContext());
 
             view.setText(name[position]);
-            view.setTextSize(60.0f);
+            view.setTextSize(20.0f);
             return view;
         }
 ```

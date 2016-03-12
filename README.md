@@ -1,5 +1,5 @@
 # 선택위젯
-
+![selectionwidget.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/selectionwidget.JPG?,raw=true)
 # List View
 
 ##1. textView 하나를 List View의 item으로 만들기
@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
   
 ```
 ##2. 하나의 부분화면을 List View의 item으로 만들기
+![listView2.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/listView2.JPG?,raw=true)
+
 XML파일로 view group 만들기 (view 구성)
 
 ```XML
@@ -306,7 +308,7 @@ convertview 이용
 
 
 # Grid View
-
+![gridview.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/gridview.JPG?,raw=true)
 gridView 생성
 ```XML
     <GridView

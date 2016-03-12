@@ -3,6 +3,7 @@
 # List View
 
 ##1. textView 하나를 List View의 item으로 만들기
+![listView1.jpg]()
 listView 생성
 ```XML
     <ListView

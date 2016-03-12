@@ -11,7 +11,7 @@ ex) 리스트뷰, 그리드뷰, 스피너, 갤러리
 ##1. textView 하나를 List View의 item으로 만들기
 ![listView1.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/listView1.JPG?,raw=true)
 
-**listView 생성
+**listView 생성**
 ```XML
     <ListView
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@ ex) 리스트뷰, 그리드뷰, 스피너, 갤러리
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 ```
-**listView inflation
+**listView inflation**
 
 ```JAVA
 public class MainActivity extends AppCompatActivity {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 ```
-**inner class로 Adaptor 생성
+**inner class로 Adaptor 생성**
 
 ```JAVA
  public int getCount()
@@ -88,7 +88,7 @@ class ListViewAdaptor extends BaseAdapter
             return view;
         }
 ```
-**listView에 Adaptor를 설정해 주기
+**listView에 Adaptor를 설정해 주기**
 ```JAVA
 public class MainActivity extends AppCompatActivity {
 
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 ##2. 하나의 부분화면을 List View의 item으로 만들기
 ![listView2.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/listView2.JPG?,raw=true)
 
-**XML파일로 view group 만들기 (view 구성)
+**XML파일로 view group 만들기 (view 구성)**
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
 </LinearLayout>
 
 ```
-**만든 view group을 화면에 붙이기
+**만든 view group을 화면에 붙이기**
 ```JAVA
 public class ListItemView extends LinearLayout
 {
@@ -178,7 +178,7 @@ public class ListItemView extends LinearLayout
 
 }
 ```
-**만든 TextView안에 들어가는 text설정 해주기
+**만든 TextView안에 들어가는 text설정 해주기**
 
 ```JAVA
   public void init(Context context){
@@ -200,7 +200,7 @@ public class ListItemView extends LinearLayout
         phonesTextView.setText(phone);
     }
 ```
-**Adaptor에 data입력, 보여줄 item 입력
+**Adaptor에 data입력, 보여줄 item 입력**
 ```JAVA
   class ListViewAdaptor extends BaseAdapter
     {
@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
     String[] phone={"010-1111-1111","010-2222-2222","010-3333-3333","010-4444-4444","010-5555-5555"};
 
 ```
-**arrayList 객체를 따로 만들어서 data 관리
+**arrayList 객체를 따로 만들어서 data 관리**
 ```JAVA
    class ListViewAdaptor extends BaseAdapter
     {
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList items =new ArrayList();
 ```
 
-**listitem에 대한 class 생성
+**listitem에 대한 class 생성**
 ```JAVA
 public class ListItem {
     String name;
@@ -290,7 +290,7 @@ public class ListItem {
     }
 }
 ```
-**adaptor에 item설정해주기
+**adaptor에 item설정해주기**
 ```JAVA
  protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -340,7 +340,7 @@ public class ListItem {
 
 ![gridview.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/gridview.JPG?,raw=true)
 
-**gridView 생성
+**gridView 생성**
 ```XML
     <GridView
         android:layout_width="wrap_content"
@@ -350,7 +350,7 @@ public class ListItem {
         android:layout_centerHorizontal="true"
         android:numColumns="3"/>
 ```
-**gridView inflation
+**gridView inflation**
 
 ```JAVA
 public class MainActivity extends AppCompatActivity {
@@ -365,7 +365,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 ```
-**inner class로 Adaptor 생성
+**inner class로 Adaptor 생성**
 ```JAVA
 class GridViewAdaptor extends BaseAdapter
     {
@@ -396,7 +396,7 @@ class GridViewAdaptor extends BaseAdapter
             return view;
         }
 ```
-**gridView에 Adaptor를 설정해 주기
+**gridView에 Adaptor를 설정해 주기**
 ```JAVA
 public class MainActivity extends AppCompatActivity {
 
@@ -414,6 +414,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 ```
-
-```JAVA
 

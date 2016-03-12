@@ -336,6 +336,8 @@ adaptor에 item설정해주기
 
 
 # Grid View
+테이블 형태와 유사하게 격자 모양으로 아이템 배치를 해주는 위젯
+
 ![gridview.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/gridview.JPG?,raw=true)
 
 gridView 생성

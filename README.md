@@ -10,8 +10,10 @@
 
 ex) 리스트뷰, 그리드뷰, 스피너, 갤러리
 
-선택위젯의 특징
+**선택위젯의 특징**
+
 직접 위젯에 원본데이터를 설정할 수 없다.-> 데이터 설정 및 관리를 하기 위해 어댑터를 사용
+
 어댑터에서 만들어주는 뷰를 이용하여(getView()method 사용) 리스트뷰의 아이템을 보여준다. 
 
 ![selectionwidget.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/selectionwidget.JPG?,raw=true)
@@ -62,9 +64,10 @@ public class MainActivity extends AppCompatActivity {
 public View getView(int position, View convertView, ViewGroup parent)
 ```
 각 아이템에 보일 뷰를 리턴하는 함수
-첫번째 파라미터 : 아이템의 인덱스를 의미, 리스트뷰에서 보일 아이템의 위치 정보 
-두번째 파라미터 : 현재 인덱스에 해당하는 뷰 객체 
-세번째 파라미터 : 이 뷰를 포함하고 있는 부모 컨테이너 객체
+
+-첫번째 파라미터 : 아이템의 인덱스를 의미, 리스트뷰에서 보일 아이템의 위치 정보 
+-두번째 파라미터 : 현재 인덱스에 해당하는 뷰 객체 
+-세번째 파라미터 : 이 뷰를 포함하고 있는 부모 컨테이너 객체
 
  
 ```JAVA

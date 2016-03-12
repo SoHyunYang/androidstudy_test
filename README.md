@@ -66,7 +66,9 @@ public View getView(int position, View convertView, ViewGroup parent)
 각 아이템에 보일 뷰를 리턴하는 함수
 
 첫번째 파라미터 : 아이템의 인덱스를 의미, 리스트뷰에서 보일 아이템의 위치 정보 
+
 두번째 파라미터 : 현재 인덱스에 해당하는 뷰 객체 
+
 세번째 파라미터 : 이 뷰를 포함하고 있는 부모 컨테이너 객체
 
  
@@ -248,9 +250,7 @@ public class ListItemView extends LinearLayout
     }
 ```
 
--------------------------------------
-데이터 따로 관리
--------------------------------------
+##3. data가 adaptor 밖에 정의 되어있을 경우  
 
 ```JAVA
 public class MainActivity extends AppCompatActivity {
@@ -326,7 +326,7 @@ public class ListItem {
 ```
 
 
-##3. List View의 재활용
+##4. List View의 재활용
 
 
 선택위젯은 보통 데이터가 많아 스크롤할 때 뷰를 재활용해야 버벅거림 발생을 방지할 수 있다.

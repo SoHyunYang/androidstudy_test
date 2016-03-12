@@ -3,7 +3,8 @@
 # List View
 
 ##1. textView 하나를 List View의 item으로 만들기
-![listView1.jpg]()
+![listView1.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/listView1.JPG?,raw=true)
+
 listView 생성
 ```XML
     <ListView

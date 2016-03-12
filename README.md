@@ -304,6 +304,18 @@ public class ListItem {
 ```
 **adaptor에 item설정해주기**
 ```JAVA
+class ListViewAdaptor extends BaseAdapter
+    {
+
+        ArrayList items = new ArrayList();
+
+        public void addItem(ListItem item){
+            items.add(item);
+        }
+```        
+
+
+```JAVA
  protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

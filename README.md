@@ -1,11 +1,17 @@
 # 선택위젯
+여러개의 item을 중에 하나를 선택할 수 있는 위젯
+ex) 리스트뷰, 그리드뷰, 스피너, 갤러리
+선택위젯의 특징
+직접 위젯에 원본데이터를 설정할 수 없다.-> 데이터 설정 및 관리를 하기 위해 어댑터를 사용
+어댑터에서 만들어주는 뷰를 이용하여(getView()method 사용) 리스트뷰의 아이템을 보여준다. 
+
 ![selectionwidget.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/selectionwidget.JPG?,raw=true)
 # List View
 
 ##1. textView 하나를 List View의 item으로 만들기
 ![listView1.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/listView1.JPG?,raw=true)
 
-listView 생성
+*listView 생성
 ```XML
     <ListView
         android:layout_width="wrap_content"
@@ -14,7 +20,7 @@ listView 생성
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 ```
-listView inflation
+*listView inflation
 
 ```JAVA
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +35,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 ```
-inner class로 Adaptor 생성
+*inner class로 Adaptor 생성
+
+```JAVA
+ public int getCount()
+```
+어댑터에서 관리하는 아이템의 개수를 리턴하는 함수
+```JAVA
+ public Object getItem(int position)
+```
+해당 index에 대한 아이템을 리턴하는 함수
+```JAVA
+ public long getItemId(int position)
+``` 
+해당 index에 대한 position을 리턴하는 함수
+```JAVA
+public View getView(int position, View convertView, ViewGroup parent)
+```
+각 아이템에 보일 뷰를 리턴하는 함수
+첫번째 파라미터 : 아이템의 인덱스를 의미, 리스트뷰에서 보일 아이템의 위치 정보 
+두번째 파라미터 : 현재 인덱스에 해당하는 뷰 객체 
+세번째 파라미터 : 이 뷰를 포함하고 있는 부모 컨테이너 객체
+
+ 
 ```JAVA
 class ListViewAdaptor extends BaseAdapter
     {
@@ -60,7 +88,7 @@ class ListViewAdaptor extends BaseAdapter
             return view;
         }
 ```
-listView에 Adaptor를 설정해 주기
+*listView에 Adaptor를 설정해 주기
 ```JAVA
 public class MainActivity extends AppCompatActivity {
 
@@ -79,11 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-```JAVA
 
-
-  
-```
 ##2. 하나의 부분화면을 List View의 item으로 만들기
 ![listView2.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/listView2.JPG?,raw=true)
 
@@ -292,7 +316,11 @@ adaptor에 item설정해주기
 
 ##3. List View의 재활용
 
-convertview 이용
+
+선택위젯은 보통 데이터가 많아 스크롤할 때 뷰를 재활용해야 버벅거림 발생을 방지할 수 있다.
+즉, 한번 만들어진 뷰가 화면 상태에 그대로 다시 보일 수 있도록 한다.
+이것은 이미 만들어진 뷰들을 그대로 사용하면서 데이터만 바꾸어 보여주는 방식으로, convertview(현재 인덱스에 해당하는 뷰 객체)를 이용한다.
+
 ```JAVA
 
      public View getView(int position, View convertView, ViewGroup parent) {

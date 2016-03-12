@@ -309,6 +309,7 @@ convertview 이용
 
 # Grid View
 ![gridview.JPG](https://github.com/SoHyunYang/androidstudy_test/blob/master/gridview.JPG?,raw=true)
+
 gridView 생성
 ```XML
     <GridView

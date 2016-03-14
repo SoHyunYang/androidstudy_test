@@ -336,6 +336,26 @@ class ListViewAdaptor extends BaseAdapter
 
     }
 ```
+**ListItem type으로 ArrayList를 만들고 ListItem객체를 만들어 ListItem 속에 정의되어 있는 data를 화면에 보여주기**
+```JAVA
+class ListViewAdaptor extends BaseAdapter{
+
+        ArrayList<ListItem> items = new ArrayList<ListItem>();
+
+```
+
+```JAVA
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ListItemView view = new ListItemView(getApplicationContext());
+            ListItem curItem = items.get(position);
+
+            view.setName(curItem.getName());
+            view.setPhone(curItem.getPhone());
+
+            return view;
+        }
+```
 
 
 ##4. List View의 재활용
